@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/portfolio" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.briansmont.github.io"
 
 # to run server on C9 run below line:
