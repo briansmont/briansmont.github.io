@@ -4,7 +4,6 @@ title: Blocipedia
 feature-img: "img/blocipedia-homepage.png"
 thumbnail-path: "img/blocipedia-title.png"
 short-description: Wiki Knowledge Sharing
-permalink: "/portfolio/portfolio/blocipedia.html"
 
 ---
 
