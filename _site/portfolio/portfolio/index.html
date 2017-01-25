@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>Blocipedia | Brian Mont</title>
+	<meta name="description" content="SummaryBlocipedia is a Ruby on Rails application project assigned in the curriculum. I had previously built another Rails application, but this specific proj...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://www.briansmont.github.io/portfolio/portfolio/">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Brian Mont" href="http://www.briansmont.github.io/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+	
+
+	<!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-90766981-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<a href="/">
+			<img class="avatar" src="/img/avatar.png" alt=""/>
+		</a>
+		
+		<h1 class="site-title">
+			<a href="/">Brian Mont</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			
+			
+			
+			
+			<li>
+				<a class="page-link" href="/about/">
+					About
+				</a>
+			</li>
+			
+			
+			
+			<li>
+				<a class="page-link" href="/contact/">
+					Contact
+				</a>
+			</li>
+			
+			
+			
+			
+			
+			
+			<!-- Social icons from Font Awesome, if enabled -->
+			
+
+
+<li>
+	<a href="mailto:briansmont830@gmail.com" title="Email">
+		<i class="fa fa-fw fa-envelope"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://www.facebook.com/brian.mont.50" title="Follow on Facebook">
+		<i class="fa fa-fw fa-facebook"></i>
+	</a>
+</li>
+
+
+
+
+
+<li>
+	<a href="https://github.com//briansmont" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+<li>
+	<a href="http://instagram.com/briansmont" title="Follow on Instagram">
+		<i class="fa fa-fw fa-instagram"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image">
+  <header style="background-image: url('/img/blocipedia-homepage.png')">
+    <h1 class="title">Blocipedia</h1>
+    <p class="meta">
+    January 25, 2017
+    
+    </p>
+  </header>
+  <section class="post-content"><h2 id="summary">Summary</h2>
+<p>Blocipedia is a Ruby on Rails application project assigned in the curriculum. I had previously built another Rails application, but this specific project went more in depth with integrating gem programs and exploring other Rails abilities.</p>
+
+<h2 id="problem">Problem</h2>
+<p>Blocipedia is meant to be a community for users to share their knowledge on a wide array of topics. Since the application needs to build user profiles, and then these users have access to create and edit wikis, there are many things to consider. <br /></p>
+<ul>For Example:
+    <li>Can all members create wikis?</li>
+    <li>Who has access to read specific wikis in the application?</li>
+    <li><a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete" target="_blank">CRUD</a> permissions - Who has them?</li>
+    <li>How can someone add a peer to collaborate on their wiki?</li>
+</ul>
+
+<p>These are some of the user interface topics to consider when building the application. General functionality also needs to be set up to create the user profiles, wikis, collaborators, and the relationships that connect them.</p>
+
+<h2 id="solution">Solution</h2>
+<p>To create users, I installed the <a href="https://github.com/plataformatec/devise" target="_blank">Devise gem</a>. This gem offers the application techniques for authentications, email confirmations, controller filters, and all views associated with creating/editing user information.
+<br /><br />
+Once users have been set up, CRUD (Create/Read/Update/Delete) functionality was next. I generated a wikis controller to handle all of the tasks. The controller is equipped with code to perform all of the tasks which render the views and changes requested by the user.
+<br /><br />
+As far as users having restrictions, I needed to set up roles. I used an <a href="http://edgeapi.rubyonrails.org/classes/ActiveRecord/Enum.html" target="_blank">enum</a>. This attribute enables the application to reference values as integers, such as <em>:admin = 2</em>. 
+<br />Below you can see the results of calling a user and requesting their role:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt; user = User.find(1)
+  User Load (0.1ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+=&gt; #&lt;User id: 1, email: "admin@blocipedia.com", role: 2, name: "The Boss"&gt;
+
+&gt; user.role
+=&gt; "admin"
+</code></pre>
+</div>
+<p><br />
+Once the roles were set up, I used the <a href="https://github.com/elabs/pundit" target="_blank">Pundit gem</a> to help implement a policy scope.  This dictates the roles required for specific controller actions. If a user wants to upgrade to a premium member, they can through the <a href="https://github.com/stripe/stripe-ruby" target="_blank">Stripe gem</a>. Of course, some tasks are reserved only for the administrators.
+<br /><br />
+To create a more unique experience, users also have the ability to privatize their own wikis in the app. Upon creation or editing of their own wiki, they can check off the private box, reserving it for themselves or for those they choose to be collaborators. This feature guarantees that users can protect their postings.</p>
+
+<p class="center"><img src="/img/blocipedia-gem-displays.png" alt="" /><br /><br />
+From left to right, you can see the devise sign up for new users, the upgrade account form, as well as the markdown live preview for new &amp; edited wikis.</p>
+
+<h2 id="results">Results</h2>
+<p>Upon opening the application’s main page, both existing &amp; new users have options to sign in and then their membership levels determines the rest. <em>Basic</em> members have the ability to read and create <strong>ONLY public wikis, visible to ALL users</strong>. If they choose to upgrade to <em>Premium</em> status, they can create <strong>public &amp; private wikis</strong>, and add other users as collaborators with editing abilities.</p>
+<h2 id="project-conclusions">Project Conclusions</h2>
+<p>This was my second project with Ruby on Rails. The Rails full-stack framework offers many tools that simplify the development process.  ActiveRecord allows you to easily communicate with the database. The routing system provides a clean way to direct or redirect user requests and there seems to be a limitless amount of gem programs available to implement into any application. The framework and these extensive tools made the development process an enjoyable and educational experience.</p>
+
+<p class="center"><img src="/img/blocipedia-title.png" alt="" /></p>
+</section>
+</article>
+
+<!-- Disqus -->
+
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>
