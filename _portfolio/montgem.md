@@ -3,7 +3,7 @@ layout: post
 title: MontGem
 feature-img: "img/bloc_api.png"
 thumbnail-path: "img/montgem-setup.png"
-short-description: BlocJams for iOS is awesome!
+short-description: JSON Parsing an API
 
 ---
 ## Summary
