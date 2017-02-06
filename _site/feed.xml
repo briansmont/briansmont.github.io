@@ -2,72 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Brian Mont</title>
-    <atom:link href="http://www.briansmont.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>http://www.briansmont.github.io/</link>
-    <description>A website with blog posts and pages</description>
-    <pubDate>Tue, 24 Jan 2017 23:32:09 +0000</pubDate>
-    
-      <item>
-        <title>Experience At Bloc</title>
-        <link>http://www.briansmont.github.io/2017/01/03/experience-at-bloc.html</link>
-        <guid isPermaLink="true">http://www.briansmont.github.io/2017/01/03/experience-at-bloc.html</guid>
-        <description>&lt;h3&gt;Choosing a bootcamp&lt;/h3&gt;
-&lt;p&gt;After learning some basics on my own through books and web sources, I needed a more in depth education on coding. After a lot of research and weighing pros vs cons I chose Bloc.&lt;/p&gt;
-
-&lt;h3&gt;Foundational courses&lt;/h3&gt;
-&lt;p&gt;Before getting into any application programming, Bloc’s curriculum allowed me to reinforce my skills in HTML5, CSS, JS, &amp;amp; Ruby, enough for a basic application. Accounts with &lt;a href=&quot;https://www.codeschool.com/&quot; target=&quot;_blank&quot;&gt;Code School&lt;/a&gt; and &lt;a href=&quot;https://www.codewars.com/dashboard&quot; target=&quot;_blank&quot;&gt;Code Wars&lt;/a&gt;offered me more experience working through JS &amp;amp; Ruby problems.&lt;/p&gt;
-
-&lt;h3&gt;Mentors&lt;/h3&gt;
-&lt;p&gt;The mentors at Bloc might be the greatest part of this program. Some people may have experience before signing up for a bootcamp. My personal coding experience was limited. Early on, it was very difficult for me to sort through error messages. It was also very difficult to configure the environments needed for working applications. Having a mentor who could dedicate time to me when help was needed was HUGE.&lt;br /&gt;&lt;br /&gt; Sometimes issues are unique to the point that there aren’t solutions through stack overflow or other online documentation. To a new coder, having a mentor to challenge you and help you work through issues has been an invaluable resource.&lt;/p&gt;
-
-&lt;h3&gt;Projects&lt;/h3&gt;
-&lt;p&gt;Bloc has pointed me towards various projects forcing me to explore different frameworks and libraries of code. As of now, I’ve built applications with VanillaJS, Ruby on Rails and Angular1 frameworks. The projects have required the use of Angular elements, JQuery, SCSS, JSON parsing and API calls, and much more. I’m currently learning React JS and plan on developing dynamic projects with its versatile library of code. The curriculum offered by Bloc has forced me to learn things that I wouldn’t have known to look for or how to start.&lt;/p&gt;
-
-&lt;h3&gt;Yet to come&lt;/h3&gt;
-&lt;p&gt;I am about to enter my final project phase with Bloc. I will post additional information in the future for these projects and experiences with them. Based on my experiences so far, I am confident that the final phase of this course with Bloc will be very beneficial.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
-      </item>
-    
-      <item>
-        <title>Learning to Develop</title>
-        <link>http://www.briansmont.github.io/2016/12/13/learning-to-develop.html</link>
-        <guid isPermaLink="true">http://www.briansmont.github.io/2016/12/13/learning-to-develop.html</guid>
-        <description>&lt;h3&gt;Deciding to code&lt;/h3&gt;
-&lt;p&gt;I have been working in sales for 6 years now. Every client has unique needs, patterns, and goals. At the same time, to provide for most clients, the overall company processes are very similar.
-Documenting everything requires a lot of organization, time, and record keeping. I had been through at least 20 personal systems and was discussing possible solutions when developing an internal program came up.
-This conversation led me to research the benefits of building a web application where existing and prospective clients could provide everything to me, and the system would do all of the organizing.&lt;/p&gt;
-
-&lt;h3&gt;Finding my resources&lt;/h3&gt;
-&lt;p&gt;Before I could decide if I wanted to dive deep into learning how to code, I tested available resources:&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;HTML &amp;amp; CSS Self-Learning Books&lt;/li&gt;
-    &lt;li&gt;JavaScript Self-Learning Books&lt;/li&gt;
-    &lt;li&gt;Codecademy&lt;/li&gt;
-    &lt;li&gt;W3Schools&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Hitting a plateau&lt;/h3&gt;
-&lt;p&gt;All of these resources were great…I learned the basics. I learned syntax and how to structure very simple functions. I could design a static website and have very basic click and hover actions. Online tutorials do a lot of directing but sometimes are light on explanations. These foundations were fantastic as far as learning an application’s structure, but to do anything more dynamic, it takes an investment and a lot more time.&lt;/p&gt;
-
-&lt;p&gt;Although I reached a plateau after using the above resources, I had a taste for how things worked and I wanted more. I could visualize how to develop more advanced behaviors to offer users more than just information. After doing much more research, I decided on choosing Bloc to be my online web dev bootcamp.&lt;/p&gt;
-
-&lt;h3&gt;Projects&lt;/h3&gt;
-&lt;p&gt;Learning any language’s rules and syntax is definitely beneficial, but without an end goal, it is easy to forget what you are writing. When being assigned a project, it enables you to visualize the UI. Once you decide on the UI, you can begin connecting the user requests to the actions they should be executing. For example:&lt;/p&gt;
-
-&lt;h5&gt;Some of my projects&lt;/h5&gt;
-&lt;ol&gt;
-    &lt;li&gt;BlocJams - Spotify Replica - A user must have the ability to see the albums, songs, and then be able to select actions.&lt;/li&gt;
-    &lt;li&gt;Bloccit - A reddit inspired site - A user can see &amp;amp; read topics, and then create their own and comment on existing ones. &lt;/li&gt;
-    &lt;li&gt;Blocipedia - A wiki site where users can share their knowledge on any topic.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I have found that building the user-interface is the best place for me to start. When you see what the user will be looking at, you can then connect function to the users’ requests. When the UI features are in place, you can then target and change elements depending on the application.&lt;/p&gt;
-
-&lt;p&gt;Right now, I have a foundation in JS, Ruby, Rails, HTML5, CSS, JQuery, JSON, Angular1, and ReactJS. Every language, library, and framework has its benefit in specific situations. Some are defintely better than others. I look forward to continuing my education to solidify these and learn more through practice and new projects.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
-      </item>
+    <atom:link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>http://0.0.0.0:8080/</link>
+    <description>A personal portfolio and blog website</description>
+    <pubDate>Mon, 06 Feb 2017 23:27:05 +0000</pubDate>
     
   </channel>
 </rss>

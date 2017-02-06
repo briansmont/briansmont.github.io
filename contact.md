@@ -2,7 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
-
+feature-img: "img/color.png"
 ---
 
 Thanks for checking out my website. I hope you found my case studies and posts informative. If you would like to reach out to me about anything please fill out the form below!
