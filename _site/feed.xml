@@ -2,55 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Brian Mont</title>
-    <atom:link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>http://0.0.0.0:8080/</link>
+    <atom:link href="http://www.your-domain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>http://www.your-domain.com/</link>
     <description>A personal portfolio and blog website</description>
-    <pubDate>Tue, 07 Feb 2017 01:10:42 +0000</pubDate>
+    <pubDate>Tue, 07 Feb 2017 15:44:31 +0000</pubDate>
     
       <item>
-        <title>Learning to Develop</title>
-        <link>http://0.0.0.0:8080/2017/02/06/react-redux.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:8080/2017/02/06/react-redux.html</guid>
-        <description>&lt;h3&gt;Deciding to code&lt;/h3&gt;
-&lt;p&gt;I have been working in sales for 6 years now. Every client has unique needs, patterns, and goals. At the same time, to provide for most clients, the overall company processes are very similar.
-Documenting everything requires a lot of organization, time, and record keeping. I had been through at least 20 personal systems and was discussing possible solutions when developing an internal program came up.
-This conversation led me to research the benefits of building a web application where existing and prospective clients could provide everything to me, and the system would do all of the organizing.&lt;/p&gt;
-
-&lt;h3&gt;Finding my resources&lt;/h3&gt;
-&lt;p&gt;Before I could decide if I wanted to dive deep into learning how to code, I tested available resources:&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;HTML &amp;amp; CSS Self-Learning Books&lt;/li&gt;
-    &lt;li&gt;JavaScript Self-Learning Books&lt;/li&gt;
-    &lt;li&gt;Codecademy&lt;/li&gt;
-    &lt;li&gt;W3Schools&lt;/li&gt;
+        <title>First Experiences With React</title>
+        <link>http://www.your-domain.com/2017/02/06/react-redux.html</link>
+        <guid isPermaLink="true">http://www.your-domain.com/2017/02/06/react-redux.html</guid>
+        <description>&lt;h3&gt;Advantages of React&lt;/h3&gt;
+&lt;p&gt;I recently decided to built some basic applications with React. If you know basic JS it is relatively straight forward.
+A few bullet points:&lt;/p&gt;
+&lt;ul&gt;&lt;strong&gt;React Pros&lt;/strong&gt;
+    &lt;li&gt;It's easy to see how a component is rendered - it is right in the render function!&lt;/li&gt;
+    &lt;li&gt;Since each part of an app should be built into its own component, it is incredibly easy to follow functionality. This makes debugging and maintainance pretty simple&lt;/li&gt;
+    &lt;li&gt;It works with most frameworks. I rebuilt portions of an AngularJS application to render using React with very little issue.&lt;/li&gt;
+    &lt;li&gt;The Virtual DOM - React knows when to render the view because it is aware of data changes.&lt;/li&gt;
+    &lt;li&gt;There are many react-addons which offer high versatility - For example, state management: &lt;a href=&quot;http://redux.js.org/&quot; target=&quot;_blank&quot;&gt;redux&lt;/a&gt;, or graphing abilities: &lt;a href=&quot;http://recharts.org/#/en-US/&quot; target=&quot;_blank&quot;&gt;recharts&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h3&gt;Hitting a plateau&lt;/h3&gt;
-&lt;p&gt;All of these resources were great…I learned the basics. I learned syntax and how to structure very simple functions. I could design a static website and have very basic click and hover actions. Online tutorials do a lot of directing but sometimes are light on explanations. These foundations were fantastic as far as learning an application’s structure, but to do anything more dynamic, it takes an investment and a lot more time.&lt;/p&gt;
-
-&lt;p&gt;Although I reached a plateau after using the above resources, I had a taste for how things worked and I wanted more. I could visualize how to develop more advanced behaviors to offer users more than just information. After doing much more research, I decided on choosing Bloc to be my online web dev bootcamp.&lt;/p&gt;
-
-&lt;h3&gt;Projects&lt;/h3&gt;
-&lt;p&gt;Learning any language’s rules and syntax is definitely beneficial, but without an end goal, it is easy to forget what you are writing. When being assigned a project, it enables you to visualize the UI. Once you decide on the UI, you can begin connecting the user requests to the actions they should be executing. For example:&lt;/p&gt;
-
-&lt;h5&gt;Some of my projects&lt;/h5&gt;
-&lt;ol&gt;
-    &lt;li&gt;BlocJams - Spotify Replica - A user must have the ability to see the albums, songs, and then be able to select actions.&lt;/li&gt;
-    &lt;li&gt;Bloccit - A reddit inspired site - A user can see &amp;amp; read topics, and then create their own and comment on existing ones. &lt;/li&gt;
-    &lt;li&gt;Blocipedia - A wiki site where users can share their knowledge on any topic.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I have found that building the user-interface is the best place for me to start. When you see what the user will be looking at, you can then connect function to the users’ requests. When the UI features are in place, you can then target and change elements depending on the application.&lt;/p&gt;
-
-&lt;p&gt;Right now, I have a foundation in JS, Ruby, Rails, HTML5, CSS, JQuery, JSON, Angular1, and ReactJS. Every language, library, and framework has its benefit in specific situations. Some are defintely better than others. I look forward to continuing my education to solidify these and learn more through practice and new projects.&lt;/p&gt;
+&lt;ul&gt;&lt;strong&gt;React Negatives&lt;/strong&gt;
+    &lt;li&gt;React only serves as the view, although there are compatible tools to simplify state management&lt;/li&gt;
+    &lt;li&gt;Integrating ReactJS into some MVC frameworks requires additional configuration.&lt;/li&gt;
+    &lt;li&gt;Writing components isn't as straight forward as plain HTML/CSS, there is a learning curve for the new syntax&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
       </item>
     
       <item>
         <title>Experience At Bloc</title>
-        <link>http://0.0.0.0:8080/2017/01/03/experience-at-bloc.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:8080/2017/01/03/experience-at-bloc.html</guid>
+        <link>http://www.your-domain.com/2017/01/03/experience-at-bloc.html</link>
+        <guid isPermaLink="true">http://www.your-domain.com/2017/01/03/experience-at-bloc.html</guid>
         <description>&lt;h3&gt;Choosing a bootcamp&lt;/h3&gt;
 &lt;p&gt;After learning some basics on my own through books and web sources, I needed a more in depth education on coding. After a lot of research and weighing pros vs cons I chose Bloc.&lt;/p&gt;
 
@@ -71,8 +54,8 @@ This conversation led me to research the benefits of building a web application 
     
       <item>
         <title>Learning to Develop</title>
-        <link>http://0.0.0.0:8080/2016/12/13/learning-to-develop.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:8080/2016/12/13/learning-to-develop.html</guid>
+        <link>http://www.your-domain.com/2016/12/13/learning-to-develop.html</link>
+        <guid isPermaLink="true">http://www.your-domain.com/2016/12/13/learning-to-develop.html</guid>
         <description>&lt;h3&gt;Deciding to code&lt;/h3&gt;
 &lt;p&gt;I have been working in sales for 6 years now. Every client has unique needs, patterns, and goals. At the same time, to provide for most clients, the overall company processes are very similar.
 Documenting everything requires a lot of organization, time, and record keeping. I had been through at least 20 personal systems and was discussing possible solutions when developing an internal program came up.
