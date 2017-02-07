@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Brian Mont</title>
-    <atom:link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>http://0.0.0.0:8080/</link>
+    <atom:link href="http://www.your-domain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>http://www.your-domain.com/</link>
     <description>A personal portfolio and blog website</description>
-    <pubDate>Tue, 07 Feb 2017 16:09:57 +0000</pubDate>
+    <pubDate>Tue, 07 Feb 2017 16:10:35 +0000</pubDate>
     
       <item>
         <title>First Experiences With React</title>
-        <link>http://0.0.0.0:8080/2017/02/06/react-redux.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:8080/2017/02/06/react-redux.html</guid>
+        <link>http://www.your-domain.com/2017/02/06/react-redux.html</link>
+        <guid isPermaLink="true">http://www.your-domain.com/2017/02/06/react-redux.html</guid>
         <description>&lt;h3&gt;Advantages of React&lt;/h3&gt;
 &lt;p&gt;I recently decided to built some basic applications with React. If you know basic JS it is relatively straight forward.
 A few bullet points:&lt;/p&gt;
@@ -32,8 +32,8 @@ A few bullet points:&lt;/p&gt;
     
       <item>
         <title>Experience At Bloc</title>
-        <link>http://0.0.0.0:8080/2017/01/03/experience-at-bloc.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:8080/2017/01/03/experience-at-bloc.html</guid>
+        <link>http://www.your-domain.com/2017/01/03/experience-at-bloc.html</link>
+        <guid isPermaLink="true">http://www.your-domain.com/2017/01/03/experience-at-bloc.html</guid>
         <description>&lt;h3&gt;Choosing a bootcamp&lt;/h3&gt;
 &lt;p&gt;After learning some basics on my own through books and web sources, I needed a more in depth education on coding. After a lot of research and weighing pros vs cons I chose Bloc.&lt;/p&gt;
 
@@ -54,8 +54,8 @@ A few bullet points:&lt;/p&gt;
     
       <item>
         <title>Learning to Develop</title>
-        <link>http://0.0.0.0:8080/2016/12/13/learning-to-develop.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:8080/2016/12/13/learning-to-develop.html</guid>
+        <link>http://www.your-domain.com/2016/12/13/learning-to-develop.html</link>
+        <guid isPermaLink="true">http://www.your-domain.com/2016/12/13/learning-to-develop.html</guid>
         <description>&lt;h3&gt;Deciding to code&lt;/h3&gt;
 &lt;p&gt;I have been working in sales for 6 years now. Every client has unique needs, patterns, and goals. At the same time, to provide for most clients, the overall company processes are very similar.
 Documenting everything requires a lot of organization, time, and record keeping. I had been through at least 20 personal systems and was discussing possible solutions when developing an internal program came up.
