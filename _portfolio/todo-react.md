@@ -132,6 +132,16 @@ setTodos: function(todos) {
   }
 },
 ```
+
+~~~
+setTodos: function(todos) {
+  if ($.isArray(todos)) {
+    localStorage.setItem('todos', JSON.stringify(todos));
+    return todos;
+  }
+},
+~~~
+
 The code directly above sets the todos into local storage
 <small>Similar functions in the TodoAPI can filter todos for search-text or completion status, as well as get the stored todos to display in the application.
 
