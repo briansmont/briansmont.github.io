@@ -111,9 +111,9 @@ You simply need to include the main component in your application file, and have
 <!--Talk about jsx rendering-->
 <!--babel so jsx can be read--></p>
 
-<h3>Phase 1</h3>
+<h2>Phase 1</h2>
 
-<h5>Container Component</h5>
+<h4>Container Component</h4>
 <p>In the application, I needed to have a search bar, a visual list of the to-do items, and a place to type in new tasks. Each of these would be their own component, but they need to be held within one container component. My main component, <strong>TodoApp.jsx</strong> was setup in this format:</p>
 
 <p><strong>TodoApp.jsx:</strong><br /></p>
@@ -159,15 +159,72 @@ var TodoApp = React.createClass({
 module.exports = TodoApp; 
 </code></pre>
 </div>
-<p><small>The prop function explanation</small></p>
+<p><small>Within the subcomponents, events such as “onSearch” take place. When those functions are triggered, they have access to functions in TodoApp through the props…</small></p>
 
-<h5>Lifecycle methods and Changes of State</h5>
-<p>Some tidbits about when I am using them - and images of the code itself
-componentDidUpdate(), componentWillUpdate</p>
+<h4>Props</h4>
+<p>Props (Properties) have the ability to pass data between components. In the code above, <strong>handleSearch, handleToggle, and handleAddTodo</strong> are all functions within the TodoApp, the container component. This container component interacts with its <i>child components</i> through props.
+<br />
+In the <strong>AddTodo component</strong>, when a user triggers the onNewTodo function, it will call the <strong>TodoApp component</strong> function of <strong>handleAddTodo</strong>.
+The child components will trigger changes in the parent/container component, which changes the <strong>state</strong> of the application.</p>
+<h4>State</h4>
+<p>In my application, when a user onNewTodo, it triggers the parent component’s handleAddTodo. This will <strong>change the state of the application</strong>
+<br />
+<strong>AddTodo.jsx</strong>: call:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>this.props.onNewTodo(todoText)
+</code></pre>
+</div>
+<p>Triggers:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;AddTodo onNewTodo={this.handleAddTodo}/&gt;
+</code></pre>
+</div>
+<p><strong>Within TodoApp.jsx</strong>:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>handleAddTodo: function(text) {
+this.setState({
+  todos: [
+    ...this.state.todos, 
+    {
+      id: uuid(),
+      text: text,
+      completed: false,
+      createdAt: moment().unix(),
+      completedAt: undefined,
+    }
+  ],
+})
+</code></pre>
+</div>
+<p>Above, we call <strong>this.setState()</strong> to change the state of the application.
+There are a variety of <strong><a href="https://facebook.github.io/react/docs/react-component.html" target="_blank">Lifecycle Methods</a> that are available with React to help you manage state at different points.</strong></p>
+<ul>Here are a few I used frequently in this app:
+  <li>componentWillUpdate()</li>
+  <li>componentDidUpdate()</li>
+  <li>setState()</li>
+  <li>getState()</li>
+</ul>
+<p>There are many more that are available in the link directly above</p>
 
-<p>Debugging - React debugging tools</p>
+<h4>Local Storage</h4>
+<p>At this point my components all work well together. When something happens in a component, it is passed up through the parent and back down to all of the children with the render functions. The problem is when you refresh the page all of your To-Do tasks will disappear. As a temporary solution I set up an API tool which saved the tasks to a browser’s local storage.
+<br />
+<strong>TodoApp.jsx:</strong></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>componentDidUpdate: function() {
+  TodoAPI.setTodos(this.state.todos);
+}
+</code></pre>
+</div>
+<p><strong>TodoAPI.jsx:</strong></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>setTodos: function(todos) {
+  if ($.isArray(todos)) {
+    localStorage.setItem('todos', JSON.stringify(todos));
+    return todos;
+  }
+},
+</code></pre>
+</div>
+<p>The code directly above sets the todos into local storage
+<small>Similar functions in the TodoAPI can filter todos for search-text or completion status, as well as get the stored todos to display in the application.</small></p>
 
-<h3>Phase 2</h3>
+<h2>Phase 2</h2>
 <p>Refactoring with Redux
 What is redux?
 Reducers
