@@ -29,7 +29,7 @@ You simply need to include the main component in your application file, and have
 In the application, I needed to have a search bar, a visual list of the to-do items, and a place to type in new tasks. Each of these would be their own component, but they need to be held within one container component. My main component, <strong>TodoApp.jsx</strong> was setup in this format:
 
 <strong>TodoApp.jsx:</strong><br>
-```
+~~~
 var React = require('react');
 var TodoApp = React.createClass({
   render: function() {
@@ -41,21 +41,21 @@ var TodoApp = React.createClass({
   }
 });
 module.exports = TodoApp; 
-```
+~~~
 The <strong>module.exports = TodoApp;</strong> allows you to inject this component into other files in your application. The main JS file in my app, <strong>app.jsx</strong> is setup in this fashion:
 <br>
 <strong>app.jsx:</strong>
-```
+~~~
 var TodoApp = require('TodoApp');
 ReactDOM.render(
   <TodoApp/>,
   document.getElementById('app')
 );
-```
+~~~
 The first line of code directly above includes the component into this completely separate file. The remainder of the code is required to render the TodoApp into the DOM element with the <strong>ID of 'app'</strong>.
 
 Eventually, the <strong>TodoApp.jsx</strong> file looks like this to include the subcomponents needed to accomplish the tasks.
-```
+~~~
 var React = require('react');
 var TodoApp = React.createClass({
   render: function() {
@@ -70,7 +70,7 @@ var TodoApp = React.createClass({
   }
 });
 module.exports = TodoApp; 
-```
+~~~
 <small>Within the subcomponents, events such as "onSearch" take place. When those functions are triggered, they have access to functions in TodoApp through the props...</small>
 
 <h4>Props</h4>
@@ -82,15 +82,15 @@ The child components will trigger changes in the parent/container component, whi
 In my application, when a user onNewTodo, it triggers the parent component's handleAddTodo. This will <strong>change the state of the application</strong>
 <br>
 <strong>AddTodo.jsx</strong>: call:
-```
+~~~
 this.props.onNewTodo(todoText)
-```
+~~~
 Triggers:
-```
+~~~
 <AddTodo onNewTodo={this.handleAddTodo}/>
-```
+~~~
 <strong>Within TodoApp.jsx</strong>:
-```
+~~~
 handleAddTodo: function(text) {
 this.setState({
   todos: [
@@ -104,7 +104,7 @@ this.setState({
     }
   ],
 })
-```
+~~~
 Above, we call <strong>this.setState()</strong> to change the state of the application.
 There are a variety of <strong><a href="https://facebook.github.io/react/docs/react-component.html" target="_blank">Lifecycle Methods</a> that are available with React to help you manage state at different points.
 <ul>Here are a few I used frequently in this app:
@@ -118,29 +118,21 @@ There are a variety of <strong><a href="https://facebook.github.io/react/docs/re
 At this point my components all work well together. When something happens in a component, it is passed up through the parent and back down to all of the children with the render functions. The problem is when you refresh the page all of your To-Do tasks will disappear. As a temporary solution I set up an API tool which saved the tasks to a browser's local storage.
 <br>
 <strong>TodoApp.jsx:</strong>
-```
+~~~
 componentDidUpdate: function() {
   TodoAPI.setTodos(this.state.todos);
 }
-```
+~~~
 <strong>TodoAPI.jsx:</strong>
-```
+~~~
 setTodos: function(todos) {
   if ($.isArray(todos)) {
     localStorage.setItem('todos', JSON.stringify(todos));
     return todos;
   }
 },
-```
+~~~
 
-~~~
-setTodos: function(todos) {
-  if ($.isArray(todos)) {
-    localStorage.setItem('todos', JSON.stringify(todos));
-    return todos;
-  }
-},
-~~~
 
 The code directly above sets the todos into local storage
 <small>Similar functions in the TodoAPI can filter todos for search-text or completion status, as well as get the stored todos to display in the application.
