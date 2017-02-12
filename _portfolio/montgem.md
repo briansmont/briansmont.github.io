@@ -49,6 +49,7 @@ If the user exists, the Bloc API returns the authorization token. This is the to
 ```
 @auth_token = response["auth_token"]
 ```
+<br>
 ~~~
 @auth_token = response["auth_token"]
 ~~~
