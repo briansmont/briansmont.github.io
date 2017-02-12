@@ -222,15 +222,6 @@ There are a variety of <strong><a href="https://facebook.github.io/react/docs/re
 </code></pre>
 </div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>setTodos: function(todos) {
-  if ($.isArray(todos)) {
-    localStorage.setItem('todos', JSON.stringify(todos));
-    return todos;
-  }
-},
-</code></pre>
-</div>
-
 <p>The code directly above sets the todos into local storage
 <small>Similar functions in the TodoAPI can filter todos for search-text or completion status, as well as get the stored todos to display in the application.</small></p>
 
