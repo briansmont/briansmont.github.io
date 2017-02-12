@@ -25,30 +25,30 @@ The following image depicts the initial setup for the gem. Some modifications we
 ![]({{ site.baseurl }}/img/montgem-setup.png)
 
 This code is saved into a file: <strong>mont_gem.gemspec</strong> Since other the file is called from a Ruby method, any Ruby actions can be called on this file. It is important to note the .add_runtime_dependency of <a href="https://github.com/jnunemaker/httparty" target="_blank">httparty</a>. This program allows a Ruby interface which deals with the HTTP requests.
-~~~
+```
 s.add_runtime_dependency 'httparty', '~> 0.13
-~~~
+```
 
 To specify where the request will be sent to, I used the following code to simplify the repetitive requests:
-~~~
+```
 def bloc_api_url(end_point)
   "https://www.bloc.io/api/v1/#{end_point}"
 end
-~~~
+```
 {:.center}
 ![]({{ site.baseurl }}/img/montgem_json_req.png)
 
 Once this is set up, you can enter the irb console to run the application:
-~~~
+```
 2.3.0 :001 > require './lib/mont_gem.rb'
  => true 
 2.3.0 :002 > MontGem.new("email", "password")
  => #<MontGem:0x00000001190ec8 @auth_token="authorization_token_returned_here">
-~~~
+```
 If the user exists, the Bloc API returns the authorization token. This is the token that needs to be saved and passed in as a header for later requests.
-~~~
+```
 @auth_token = response["auth_token"]
-~~~
+```
 <br>
 For every other method to follow, including <strong>get_me</strong>, and <strong>create_message(sender_email, recipient_id, subject, message)</strong>, this <strong>@auth_token</strong> is passed through to gain initial access to the API request. The user must include the appropriate parameters, whether they are a string or a number, in order to complete the request.
 
