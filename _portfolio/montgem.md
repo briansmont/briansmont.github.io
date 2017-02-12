@@ -49,6 +49,10 @@ If the user exists, the Bloc API returns the authorization token. This is the to
 ```
 @auth_token = response["auth_token"]
 ```
+~~~
+@auth_token = response["auth_token"]
+~~~
+
 <br>
 For every other method to follow, including <strong>get_me</strong>, and <strong>create_message(sender_email, recipient_id, subject, message)</strong>, this <strong>@auth_token</strong> is passed through to gain initial access to the API request. The user must include the appropriate parameters, whether they are a string or a number, in order to complete the request.
 

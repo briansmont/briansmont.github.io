@@ -136,6 +136,10 @@ end
 <div class="highlighter-rouge"><pre class="highlight"><code>@auth_token = response["auth_token"]
 </code></pre>
 </div>
+<div class="highlighter-rouge"><pre class="highlight"><code>@auth_token = response["auth_token"]
+</code></pre>
+</div>
+
 <p><br />
 For every other method to follow, including <strong>get_me</strong>, and <strong>create_message(sender_email, recipient_id, subject, message)</strong>, this <strong>@auth_token</strong> is passed through to gain initial access to the API request. The user must include the appropriate parameters, whether they are a string or a number, in order to complete the request.</p>
 
