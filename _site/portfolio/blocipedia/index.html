@@ -115,7 +115,8 @@
 Once users have been set up, CRUD (Create/Read/Update/Delete) functionality was next. I generated a wikis controller to handle all of the tasks. The controller is equipped with code to perform all of the tasks which render the views and changes requested by the user.
 <br /><br />
 As far as users having restrictions, I needed to set up roles. I used an <a href="http://edgeapi.rubyonrails.org/classes/ActiveRecord/Enum.html" target="_blank">enum</a>. This attribute enables the application to reference values as integers, such as <em>:admin = 2</em>. 
-<br />Below you can see the results of calling a user and requesting their role:</p>
+<br />Below you can see the results of calling a user and requesting their role:
+<br /></p>
 <div class="highlighter-rouge"><pre class="highlight"><code>&gt; user = User.find(1)
   User Load (0.1ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
 =&gt; #&lt;User id: 1, email: "admin@blocipedia.com", role: 2, name: "The Boss"&gt;
