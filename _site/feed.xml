@@ -5,7 +5,7 @@
     <atom:link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://0.0.0.0:8080/</link>
     <description>A personal portfolio and blog website</description>
-    <pubDate>Sun, 12 Feb 2017 19:39:29 +0000</pubDate>
+    <pubDate>Sun, 12 Feb 2017 19:45:00 +0000</pubDate>
     
       <item>
         <title>First Experiences With React</title>
