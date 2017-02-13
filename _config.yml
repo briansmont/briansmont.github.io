@@ -72,9 +72,12 @@ collections:
 # BUILD SETTINGS
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
 
 sass:
   sass_dir: _sass
   style: :compressed
+
 
 gems: [jekyll-paginate, octopress-debugger]
