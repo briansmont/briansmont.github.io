@@ -28,6 +28,8 @@ I have learned and built applications with many languages, frameworks, and libra
 <strong>Objective:</strong><br>
 To work for a quality company as a front end web developer where I will have an opportunity to use and develop my skills for the benefit of the company.
 
+<strong>Resume:</strong>
+<a href="img/Mont-CreddleResume-v1.0.pdf">Tech Resume</a>
 
 
 
