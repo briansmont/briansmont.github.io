@@ -117,14 +117,14 @@ Once users have been set up, CRUD (Create/Read/Update/Delete) functionality was 
 As far as users having restrictions, I needed to set up roles. I used an <a href="http://edgeapi.rubyonrails.org/classes/ActiveRecord/Enum.html" target="_blank">enum</a>. This attribute enables the application to reference values as integers, such as <em>:admin = 2</em>. 
 <br />Below you can see the results of calling a user and requesting their role:
 <br /></p>
-<div class="highlighter-rouge"><pre class="highlight"><code>&gt; user = User.find(1)
-  User Load (0.1ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
-=&gt; #&lt;User id: 1, email: "admin@blocipedia.com", role: 2, name: "The Boss"&gt;
 
-&gt; user.role
-=&gt; "admin"
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&gt;</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">User</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  <span class="nx">User</span> <span class="nx">Load</span> <span class="p">(</span><span class="mf">0.1</span><span class="nx">ms</span><span class="p">)</span>  <span class="nx">SELECT</span>  <span class="s2">"users"</span><span class="p">.</span><span class="o">*</span> <span class="nx">FROM</span> <span class="s2">"users"</span> <span class="nx">WHERE</span> <span class="s2">"users"</span><span class="p">.</span><span class="s2">"id"</span> <span class="o">=</span> <span class="p">?</span> <span class="nx">LIMIT</span> <span class="mi">1</span>  <span class="p">[[</span><span class="s2">"id"</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="o">=&gt;</span> <span class="err">#</span><span class="o">&lt;</span><span class="nx">User</span> <span class="nx">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">email</span><span class="err">:</span> <span class="s2">"admin@blocipedia.com"</span><span class="p">,</span> <span class="nx">role</span><span class="err">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">name</span><span class="err">:</span> <span class="s2">"The Boss"</span><span class="o">&gt;</span>
+
+<span class="o">&gt;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">role</span>
+<span class="o">=&gt;</span> <span class="s2">"admin"</span></code></pre></figure>
+
 <p><br />
 Once the roles were set up, I used the <a href="https://github.com/elabs/pundit" target="_blank">Pundit gem</a> to help implement a policy scope.  This dictates the roles required for specific controller actions. If a user wants to upgrade to a premium member, they can through the <a href="https://github.com/stripe/stripe-ruby" target="_blank">Stripe gem</a>. Of course, some tasks are reserved only for the administrators.
 <br /><br />

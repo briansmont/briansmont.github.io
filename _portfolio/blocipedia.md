@@ -29,14 +29,14 @@ Once users have been set up, CRUD (Create/Read/Update/Delete) functionality was 
 As far as users having restrictions, I needed to set up roles. I used an <a href="http://edgeapi.rubyonrails.org/classes/ActiveRecord/Enum.html" target="_blank">enum</a>. This attribute enables the application to reference values as integers, such as *:admin = 2*. 
 <br>Below you can see the results of calling a user and requesting their role:
 <br>
-```
+{% highlight javascript %}
 > user = User.find(1)
   User Load (0.1ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
 => #<User id: 1, email: "admin@blocipedia.com", role: 2, name: "The Boss">
 
 > user.role
 => "admin"
-```
+{% endhighlight %}
 <br>
 Once the roles were set up, I used the <a href="https://github.com/elabs/pundit" target="_blank">Pundit gem</a> to help implement a policy scope.  This dictates the roles required for specific controller actions. If a user wants to upgrade to a premium member, they can through the <a href="https://github.com/stripe/stripe-ruby" target="_blank">Stripe gem</a>. Of course, some tasks are reserved only for the administrators.
 <br><br>

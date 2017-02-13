@@ -113,33 +113,31 @@
 <p class="center"><img src="/img/montgem-setup.png" alt="" /></p>
 
 <p>This code is saved into a file: <strong>mont_gem.gemspec</strong> Since other the file is called from a Ruby method, any Ruby actions can be called on this file. It is important to note the .add_runtime_dependency of <a href="https://github.com/jnunemaker/httparty" target="_blank">httparty</a>. This program allows a Ruby interface which deals with the HTTP requests.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>s.add_runtime_dependency 'httparty', '~&gt; 0.13
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">s</span><span class="p">.</span><span class="nx">add_runtime_dependency</span> <span class="s1">'httparty'</span><span class="p">,</span> <span class="err">'</span><span class="o">~&gt;</span> <span class="mf">0.13</span></code></pre></figure>
 
 <p>To specify where the request will be sent to, I used the following code to simplify the repetitive requests:</p>
-<div class="center highlighter-rouge"><pre class="highlight"><code>def bloc_api_url(end_point)
-  "https://www.bloc.io/api/v1/#{end_point}"
-end
-</code></pre>
-</div>
-<p><img src="/img/montgem_json_req.png" alt="" /></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">def</span> <span class="nx">bloc_api_url</span><span class="p">(</span><span class="nx">end_point</span><span class="p">)</span>
+  <span class="s2">"https://www.bloc.io/api/v1/#{end_point}"</span>
+<span class="nx">end</span></code></pre></figure>
+
+<p class="center"><img src="/img/montgem_json_req.png" alt="" /></p>
 
 <p>Once this is set up, you can enter the irb console to run the application:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>2.3.0 :001 &gt; require './lib/mont_gem.rb'
- =&gt; true 
-2.3.0 :002 &gt; MontGem.new("email", "password")
- =&gt; #&lt;MontGem:0x00000001190ec8 @auth_token="authorization_token_returned_here"&gt;
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="mf">2.3</span><span class="p">.</span><span class="mi">0</span> <span class="err">:</span><span class="mi">001</span> <span class="o">&gt;</span> <span class="nx">require</span> <span class="s1">'./lib/mont_gem.rb'</span>
+ <span class="o">=&gt;</span> <span class="kc">true</span> 
+<span class="mf">2.3</span><span class="p">.</span><span class="mi">0</span> <span class="err">:</span><span class="mi">002</span> <span class="o">&gt;</span> <span class="nx">MontGem</span><span class="p">.</span><span class="k">new</span><span class="p">(</span><span class="s2">"email"</span><span class="p">,</span> <span class="s2">"password"</span><span class="p">)</span>
+ <span class="o">=&gt;</span> <span class="err">#</span><span class="o">&lt;</span><span class="nx">MontGem</span><span class="err">:</span><span class="mh">0x00000001190ec8</span> <span class="err">@</span><span class="nx">auth_token</span><span class="o">=</span><span class="s2">"authorization_token_returned_here"</span><span class="o">&gt;</span></code></pre></figure>
+
 <p>If the user exists, the Bloc API returns the authorization token. This is the token that needs to be saved and passed in as a header for later requests.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>@auth_token = response["auth_token"]
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">auth_token</span> <span class="o">=</span> <span class="nx">response</span><span class="p">[</span><span class="s2">"auth_token"</span><span class="p">]</span></code></pre></figure>
+
 <p><br /></p>
-<div class="highlighter-rouge"><pre class="highlight"><code>@auth_token = response["auth_token"]
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">auth_token</span> <span class="o">=</span> <span class="nx">response</span><span class="p">[</span><span class="s2">"auth_token"</span><span class="p">]</span></code></pre></figure>
 
 <p><br />
 For every other method to follow, including <strong>get_me</strong>, and <strong>create_message(sender_email, recipient_id, subject, message)</strong>, this <strong>@auth_token</strong> is passed through to gain initial access to the API request. The user must include the appropriate parameters, whether they are a string or a number, in order to complete the request.</p>
