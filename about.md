@@ -29,6 +29,6 @@ I have learned and built applications with many languages, frameworks, and libra
 To work for a quality company as a front end web developer where I will have an opportunity to use and develop my skills for the benefit of the company.
 <br>
 
-<a href="../img/BrianMont-Resume-2017-Tech.pdf">My Resume</a>
+<a href="../img/mont-resume-tech-2017-2-14.pdf" target="_blank">My Resume</a>
 
 
