@@ -1,8 +1,8 @@
 ---
 layout: post
 title: ToDo With React & Redux
-feature-img: "img/turn_the_music_up.png"
-thumbnail-path: "img/blocjams_title.png"
+feature-img: "img/todo-logged-in.png"
+thumbnail-path: "img/todo-logged-in.png"
 short-description: Functional To-do list, wired with Firebase
 ---
 
@@ -136,6 +136,15 @@ setTodos: function(todos) {
 The code directly above sets the todos into local storage<br>
 <small>Similar functions in the TodoAPI can filter todos for search-text or completion status, as well as get the stored todos to display in the application.
 
+{:.center}
+![]({{ site.baseurl }}/img/todo-list-showcomplete.png)
+
+
+{:.left}
+![]({{ site.baseurl }}/img/todo-login.png)
+
+{:.right}
+![]({{ site.baseurl }}/img/todo-logged-in.png)
 
 <!--<h2>Phase 2</h2>-->
 <!--Refactoring with Redux-->
