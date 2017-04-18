@@ -136,15 +136,22 @@ setTodos: function(todos) {
 The code directly above sets the todos into local storage<br>
 <small>Similar functions in the TodoAPI can filter todos for search-text or completion status, as well as get the stored todos to display in the application.
 
-{:.center}
-![]({{ site.baseurl }}/img/todo-list-showcomplete.png)
+
+<h2>Phase 2: Implement Redux</h2>
+Redux simplifies the state of the application by storing the <strong>entire state</strong> in a <i>single</i> <strong><u>store</u></strong>. To change the state tree, you need to trigger an <strong><u>action</u></strong>. To specify what that action does to the state tree, you use <strong><u>reducers</u></strong>.
+<br><br>
+I will explain how I implemented those three core redux building blocks below...
 
 
-{:.left}
-![]({{ site.baseurl }}/img/todo-login.png)
+<!--{:.center}-->
+<!--![]({{ site.baseurl }}/img/todo-list-showcomplete.png)-->
 
-{:.right}
-![]({{ site.baseurl }}/img/todo-logged-in.png)
+
+<!--{:.left}-->
+<!--![]({{ site.baseurl }}/img/todo-login.png)-->
+
+<!--{:.right}-->
+<!--![]({{ site.baseurl }}/img/todo-logged-in.png)-->
 
 <!--<h2>Phase 2</h2>-->
 <!--Refactoring with Redux-->
