@@ -5,7 +5,21 @@
     <atom:link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://0.0.0.0:8080/</link>
     <description>A personal portfolio and blog website</description>
-    <pubDate>Thu, 25 May 2017 21:12:07 +0000</pubDate>
+    <pubDate>Thu, 25 May 2017 21:54:27 +0000</pubDate>
+    
+      <item>
+        <title>Other projects</title>
+        <link>http://0.0.0.0:8080/2017/05/25/more-work.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/2017/05/25/more-work.html</guid>
+        <description>&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://brick-game-replica.herokuapp.com/&quot; target=&quot;_blank&quot;&gt;Brick Destroyer&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://frozen-earth-55074.herokuapp.com/&quot; target=&quot;_blank&quot;&gt;A Timer &amp;amp; Countdown Application using React&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://secret-taiga-69974.herokuapp.com/&quot; target=&quot;_blank&quot;&gt;Sports Chat Application using Ruby on Rails&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://obscure-scrubland-45260.herokuapp.com/&quot; target=&quot;_blank&quot;&gt;Location Finder - Links to Google Maps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      </item>
     
       <item>
         <title>First Experiences With React</title>
